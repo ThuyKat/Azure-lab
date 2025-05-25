@@ -3,6 +3,11 @@
 1. Question and answer lab
 ![alt text](qna.png)
 
+2. conversation language understandign lab: 
+![alt text](clu.png)
+
+3. text classification - single label
+![alt text](classification.png)
 #  submodules command
 - add a submodule:
 ```bash
