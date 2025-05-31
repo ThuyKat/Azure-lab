@@ -11,18 +11,19 @@
 
 4. openAi service
 
-This lab has following steps: 
-1. Deploy a base model : gpt-4o in this exercise, using Azure CLI
-2. Install openAI SDK
-3. Update .env file with endpoint, key and model's deployment name
-4. First part: testing base model with different system message and prompt. As system message change and prompt provides mode details, the response gets more complex 
-5. Second part: provide grounding.txt and add it into the messages_arr as user_message. Each assistant response is added into the messages_arr
-
+    This lab has following steps: 
+    1. Deploy a base model : gpt-4o in this exercise, using Azure CLI
+    2. Install openAI SDK
+    3. Update .env file with endpoint, key and model's deployment name
+    4. First part: testing base model with different system message and prompt. As system message change and prompt provides mode details, the response gets more complex 
+    5. Second part: provide grounding.txt and add it into the messages_arr as user_message. Each assistant response is added into the messages_arr
 Result of part 1: 
 ![alt text](openAI1.png)
 ![alt text](openAI2.png)
 Result of part 2: 
 ![alt text](openAI3.png)
+5. Rag implementation
+![alt text](mslearn-openai/Labfiles/02-use-own-data/result.png)
 #  submodules command
 - add a submodule:
 ```bash
