@@ -1,49 +1,67 @@
 #!/bin/bash
 
 # Set values for your Search service
-url="YOUR_SEARCH_URL"
-admin_key="YOUR_ADMIN_KEY"
+url=""
+admin_key=""
+
+#!/bin/bash
+
+# Quick fix version - minimal changes to your existing script
 
 echo "-----"
+echo "Stopping indexer first..."
+curl -X POST "${url}/indexers/margies-indexer/stop?api-version=2023-11-01" \
+  -H "api-key: ${admin_key}"
+
+sleep 3
+
+echo "-----"  
 echo "Updating the skillset..."
-curl -X PUT "${url}/skillsets/margies-skillset?api-version=2020-06-30" \
+curl -X PUT "${url}/skillsets/margies-skillset?api-version=2023-11-01" \
   -H "Content-Type: application/json" \
   -H "api-key: ${admin_key}" \
   -d @skillset.json
 
-# wait 2 seconds
 sleep 2
 
 echo "-----"
-echo "Updating the index..."
-curl -X PUT "${url}/indexes/margies-index?api-version=2020-06-30" \
+echo "Deleting existing index (to avoid field modification errors)..."
+curl -X DELETE "${url}/indexes/margies-index?api-version=2023-11-01" \
+  -H "api-key: ${admin_key}"
+
+sleep 2
+
+echo "-----"
+echo "Creating new index..."
+curl -X POST "${url}/indexes?api-version=2023-11-01" \
   -H "Content-Type: application/json" \
   -H "api-key: ${admin_key}" \
   -d @index.json
 
-# wait 2 seconds
 sleep 2
 
 echo "-----"
 echo "Updating the indexer..."
-curl -X PUT "${url}/indexers/margies-indexer?api-version=2020-06-30" \
+curl -X PUT "${url}/indexers/margies-indexer?api-version=2023-11-01" \
   -H "Content-Type: application/json" \
   -H "api-key: ${admin_key}" \
   -d @indexer.json
 
 echo "-----"
-echo "Resetting the indexer"
-curl -X POST "${url}/indexers/margies-indexer/reset?api-version=2020-06-30" \
+echo "Resetting the indexer..."
+curl -X POST "${url}/indexers/margies-indexer/reset?api-version=2023-11-01" \
   -H "Content-Type: application/json" \
   -H "Content-Length: 0" \
   -H "api-key: ${admin_key}"
 
-# wait 5 seconds
 sleep 5
 
 echo "-----"
-echo "Rerunning the indexer"
-curl -X POST "${url}/indexers/margies-indexer/run?api-version=2020-06-30" \
+echo "Running the indexer..."
+curl -X POST "${url}/indexers/margies-indexer/run?api-version=2023-11-01" \
   -H "Content-Type: application/json" \
   -H "Content-Length: 0" \
   -H "api-key: ${admin_key}"
+
+echo "-----"
+echo "Done! Check indexer status in the portal."

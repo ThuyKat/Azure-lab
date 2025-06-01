@@ -1,9 +1,9 @@
 #!/bin/bash
 
 # Set values for your storage account
-subscription_id="7f7931f7-3855-4c61-a115-14d8ecb1c41d"
-azure_storage_account="aisearchstore2"
-azure_storage_key="1ey5eKdfBBDJV2KMkpbfkdWU8rDZ1XiYjZDtU+O3TxetKKJlJmK4DfMDrfUe7t0+Mg/spjsFzyjq+AStppfiYw=="
+subscription_id=""
+azure_storage_account=""
+azure_storage_key=""
 
 echo "Creating container..."
 az storage container create \
