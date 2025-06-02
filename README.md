@@ -25,6 +25,12 @@ Result of part 2:
 5. Rag implementation
 ![alt text](mslearn-openai/Labfiles/02-use-own-data/result.png)
 
+6. Implement manual AI search service with data source, index, skillset
+![alt text](mslearn-knowledge-mining/aisearch9.png)
+![alt text](mslearn-knowledge-mining/aisearch10.png)
+
+7. Implement custom skill update with Function App
+![alt text](mslearn-knowledge-mining/customskill2.png)
 
 #  submodules command
 - add a submodule:
