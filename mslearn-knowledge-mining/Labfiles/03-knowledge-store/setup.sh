@@ -1,9 +1,9 @@
 #!/bin/bash
 
 # Set values for your subscription and resource group
-subscription_id="YOUR_SUBSCRIPTION_ID"
-resource_group="YOUR_RESOURCE_GROUP"
-location="YOUR_LOCATION_NAME"
+subscription_id="7f7931f7-3855-4c61-a115-14d8ecb1c41d"
+resource_group="rg-katienguyen1293-2479_ai"
+location="eastus2"
 
 # Get random numbers to create unique resource names
 unique_id="${RANDOM}${RANDOM}"
