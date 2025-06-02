@@ -29,6 +29,7 @@ STEP 12: Test the search website
 ![alt text](aisearch10.png)
 
 2. Add custom skill
+
 STEP 1: create AI services resource
 STEP 2: run the script which do the following task:
     - Create a random unique id number
