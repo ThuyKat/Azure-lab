@@ -32,6 +32,9 @@ Result of part 2:
 7. Implement custom skill update with Function App
 ![alt text](mslearn-knowledge-mining/customskill2.png)
 
+8. Implement knowledge storing with sharp skill
+![alt text](mslearn-knowledge-mining/knowledgestore2.png)
+![alt text](mslearn-knowledge-mining/knowledgestore4.png)
 #  submodules command
 - add a submodule:
 ```bash
