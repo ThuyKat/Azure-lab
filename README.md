@@ -24,6 +24,8 @@ Result of part 2:
 ![alt text](openAI3.png)
 5. Rag implementation
 ![alt text](mslearn-openai/Labfiles/02-use-own-data/result.png)
+
+
 #  submodules command
 - add a submodule:
 ```bash
