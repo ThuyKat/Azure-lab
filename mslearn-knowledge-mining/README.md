@@ -68,3 +68,25 @@ STEP 8: Run the script to update all search config
 
 STEP 9: Open indexer and confirm if the update is success > Test on Search explorer
 ![alt text](customskill2.png)
+
+3. Knowledge Storing
+
+STEP 1: run setup.sh to create 3 resources: AI services, account storage and AI search
+
+STEP 2: use AI Search REST interface to create index, skillset, datasource, indexer
+
+STEP 3: add sharp skill and knowledge storing in skillset file
+
+STEP 4: run create-search command to create search. Go to portal to check if indexer has ran successfully
+
+![alt text](knowledgestore1.png)
+
+STEP 5: View the storage containers created:
+
+![alt text](knowledgestore2.png)
+![alt text](knowledgestore4.png)
+
+STEP 6: View the images extracted from the pdf doc
+
+![alt text](knowledgestore3.png)
+
