@@ -35,6 +35,9 @@ Result of part 2:
 8. Implement knowledge storing with sharp skill
 ![alt text](mslearn-knowledge-mining/knowledgestore2.png)
 ![alt text](mslearn-knowledge-mining/knowledgestore4.png)
+
+9. Implement document intelligence custom model- template model
+![alt text](mslearn-ai-document-intelligence/di6.png)
 #  submodules command
 - add a submodule:
 ```bash
